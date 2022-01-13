@@ -21,6 +21,12 @@ app.get('/hello', (req, res) => {
   res.json({ message: 'hey there'})
 })
 
+app.get('/', (req, res) => {
+    res.send(`
+    <h1>Web 49 Rocks!</h1>
+    `)
+})
+
 const port = process.env.PORT || 9000
 app.listen(port, () => {
   console.log(`listening on port ${port}`)
